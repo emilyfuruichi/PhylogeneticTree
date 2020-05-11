@@ -1,3 +1,9 @@
+/**
+ * Point contains all the relevant data for any given data point
+ * in the distance matrix. This includes cluster info, distance, 
+ * and place in the array.
+ */
+
 package algorithm;
 
 public class Point 
@@ -8,14 +14,7 @@ public class Point
 	private String cluster;
 	protected boolean isHeader;
 	
-	public Point()
-	{
-//		row = Integer.MAX_VALUE;
-//		col = Integer.MAX_VALUE;
-//		value = 0.0;
-//		cluster = null;
-//		isHeader = true;
-	}
+	public Point() {}
 	
 	public Point(int colIn, int rowIn, String clusterIn, boolean header)
 	{
@@ -82,6 +81,6 @@ public class Point
 
 	public String toString()
 	{
-		return "["+cluster+"(r_"+row+"c_"+col+"): "+value+"]";
+		return "["+cluster+"(r_"+row+",c_"+col+"): "+value+"]";
 	}
 }
